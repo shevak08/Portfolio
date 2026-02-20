@@ -717,7 +717,7 @@ margin-left: 70px;
 }
 
 .row div {
-  min-width: 120px;
+  width: 120px;
   padding: 18px 26px;
   border-radius: 14px;
   background: rgba(255,255,255,0.05);
@@ -2542,3 +2542,4 @@ html {
 
 
 }
+
