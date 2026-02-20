@@ -23,18 +23,6 @@ body::-webkit-scrollbar-thumb {
 body {
   scrollbar-width: thin;
 }
-.project-scroll::-webkit-scrollbar {
-  height: 6px;
-}
-
-.project-scroll::-webkit-scrollbar-thumb {
-  background: #b26bff;
-  border-radius: 10px;
-}
-
-.project-scroll::-webkit-scrollbar-track {
-  background: transparent;
-}
 
 
 body {
@@ -649,76 +637,6 @@ margin-left: 70px;
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(193,140,255,0.25);
 }
-
-
-.career {
-  padding: 80px 10%;
-  color: #ff8400;
-}
-
-.career-title {
-  text-align: center;
-  font-size: 56px;
-  margin-bottom: 60px;
-}
-
-.career-title span {
-  color: #000000;
-}
-
-/* Container */
-.career-container {
-  position: relative;
-  max-width: 800px;
-  margin: auto;
-}
-
-/* Card */
-.career-card {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.15);
-  border-radius: 22px;
-  box-shadow: 5px 8px 20px rgba(0,0,0,0.08);
-  padding: 30px;
-  margin-bottom: 30px;
-
-  transition: all 0.3s ease;
-}
-
-/* Hover */
-.career-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 25px rgba(178,107,255,0.35);
-}
-
-/* Header row */
-.career-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 12px;
-}
-
-.career-role {
-  font-size: 22px;
-  color: #000000;
-  font-weight: 600;
-}
-
-.career-year {
-  font-size: 14px;
-  font-weight: 900;
-   color: #ff8989;
-}
-
-/* Description */
-.career-desc {
-  color: #000000;
-  line-height: 1.8;
-  font-size: 15px;
-}
-
-
 /* ================= STACK ================= */
 .stack {
   padding: 120px 0px;
@@ -2573,5 +2491,6 @@ html {
 
 
 }
+
 
 
