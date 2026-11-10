@@ -134,6 +134,18 @@ footer li{border-bottom:1px solid var(--line);padding:8px 0}
 .photo.tilt,.photo.tilt:hover,.photo.tilt:active,.photo.tilt:focus{box-shadow:none;background:none}
 .photo img{pointer-events:none}
 
+@media (max-width:700px){
+nav{justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;max-width:520px;margin:0 auto;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav a{white-space:nowrap;flex:none}
+section,footer{max-width:520px}
+section{padding:56px 20px}
+.hero,.hero2{max-width:520px;display:flex;flex-direction:column;justify-content:center;min-height:100vh;padding:96px 20px 30px;gap:0}
+.hero2 h1{font-size:clamp(40px,12vw,60px);letter-spacing:-2px}
+.knot-slot{height:300px;min-height:300px;flex:none;align-self:stretch}
+.grid,.flips{grid-template-columns:1fr}
+footer{grid-template-columns:1fr;padding:50px 20px 70px}
+}
 
 /* Box style + box animation (sticker boxes with hard shadows, press-down hover) */
 .panel,.face,.orb{border:2px solid var(--accent);border-radius:18px;box-shadow:6px 6px 0 var(--accent);backdrop-filter:none;-webkit-backdrop-filter:none}
@@ -151,93 +163,6 @@ nav a:hover,nav a:focus-visible{background:var(--accent);color:#06142a}
 .chip:hover,.chip:focus-visible{transform:translate(-2px,-2px);background:var(--accent);color:#06142a;border-color:var(--accent);box-shadow:5px 5px 0 var(--warm)}
 .orbit-ctl button{border:2px solid var(--accent);background:linear-gradient(var(--panel),var(--panel)),var(--bg);box-shadow:3px 3px 0 var(--accent)}
 .orbit-ctl button:hover,.orbit-ctl button:focus-visible{background:var(--accent);color:#06142a}
-@media (max-width:700px){
-
-  /* Nav: one swipeable row, full width */
-  nav{
-    left:0; right:0;
-    max-width:none; margin:0;
-    justify-content:flex-start;
-    flex-wrap:nowrap;
-    gap:8px;
-    padding:10px 14px;
-    padding-left:max(14px, env(safe-area-inset-left));
-    padding-right:max(14px, env(safe-area-inset-right));
-    overflow-x:auto;
-    overflow-y:hidden;
-    -webkit-overflow-scrolling:touch;
-    scroll-snap-type:x proximity;
-    scrollbar-width:none;
-    background:linear-gradient(var(--bg) 75%, transparent);
-  }
-  nav::-webkit-scrollbar{display:none}
-  nav a{
-    flex:0 0 auto;
-    white-space:nowrap;
-    font-size:13px;
-    padding:6px 14px;
-    scroll-snap-align:start;
-  }
-  html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
-
-  /* Layout */
-  section,footer{max-width:520px}
-  section{padding:56px 20px}
-  h2{margin-bottom:24px}
-
-  .hero,.hero2{
-    max-width:520px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    min-height:100vh;
-    min-height:100svh;          /* real visible height on mobile browsers */
-    padding:96px 20px 30px;
-    gap:0;
-  }
-  .hero2 h1{font-size:clamp(40px,12vw,60px);letter-spacing:-2px}
-  .knot-slot{height:300px;min-height:300px;flex:none;align-self:stretch}
-  .cta{gap:12px;margin-top:26px}
-  .btn{padding:10px 20px;font-size:14px}
-
-  .grid,.flips{grid-template-columns:1fr}
-  .panel{padding:22px}
-
-  /* Softer sticker shadows so they don't clip at the screen edge */
-  .panel,.face,.orb{box-shadow:4px 4px 0 var(--accent)}
-  .tilt:hover{box-shadow:5px 5px 0 var(--accent)}
-  .orb.act,.ring .orb.act{box-shadow:4px 4px 0 var(--warm)}
-
-  /* Flip cards */
-  .flip{height:340px}
-  .face{padding:22px}
-  .face .co{font-size:24px}
-
-  /* Journey carousel: taller cards so text never overflows */
-  .orbit{height:360px}
-  .ring{height:280px}
-  .ring .orb{height:280px;padding:20px}
-  .orb .yr{font-size:30px}
-  .orb h3{font-size:18px}
-  .orb p{font-size:14px;line-height:1.55}
-
-  /* Chips */
-  .chips{gap:10px}
-  .chip{padding:9px 15px;font-size:14px}
-
-  footer{grid-template-columns:1fr;padding:50px 20px 70px}
-}
-
-/* Very small phones (iPhone SE, small Androids) */
-@media (max-width:380px){
-  nav a{font-size:12px;padding:6px 12px}
-  .hero2 h1{font-size:38px}
-  .hero .role{font-size:15px}
-  section{padding:48px 16px}
-  .hero,.hero2{padding-left:16px;padding-right:16px}
-  .ring .orb{width:220px;margin-left:-110px}
-  .ring{width:220px}
-}
 </style>
 </head>
 <body>
