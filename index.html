@@ -163,6 +163,62 @@ nav a:hover,nav a:focus-visible{background:var(--accent);color:#06142a}
 .chip:hover,.chip:focus-visible{transform:translate(-2px,-2px);background:var(--accent);color:#06142a;border-color:var(--accent);box-shadow:5px 5px 0 var(--warm)}
 .orbit-ctl button{border:2px solid var(--accent);background:linear-gradient(var(--panel),var(--panel)),var(--bg);box-shadow:3px 3px 0 var(--accent)}
 .orbit-ctl button:hover,.orbit-ctl button:focus-visible{background:var(--accent);color:#06142a}
+  @media (max-width:700px){
+
+  /* Nav: one swipeable row, full width, with a solid backdrop */
+  nav{
+    left:0; right:0;
+    max-width:none; margin:0;
+    justify-content:flex-start;
+    flex-wrap:nowrap;
+    gap:8px;
+    padding:10px 14px;
+    padding-left:max(14px, env(safe-area-inset-left));
+    padding-right:max(14px, env(safe-area-inset-right));
+    overflow-x:auto;
+    overflow-y:hidden;
+    -webkit-overflow-scrolling:touch;
+    scroll-snap-type:x proximity;
+    scrollbar-width:none;
+    background:linear-gradient(var(--bg) 75%, transparent);
+  }
+  nav::-webkit-scrollbar{display:none}
+  nav a{
+    flex:0 0 auto;
+    white-space:nowrap;
+    font-size:13px;
+    padding:7px 14px;
+    scroll-snap-align:start;
+  }
+
+  /* Anchor links should stop below the fixed nav */
+  html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+
+  /* Layout */
+  section,footer{max-width:520px}
+  section{padding:56px 20px}
+
+  .hero,.hero2{
+    max-width:520px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    min-height:100vh;
+    padding:96px 20px 30px;
+    gap:0;
+  }
+  .hero2 h1{font-size:clamp(40px,12vw,60px);letter-spacing:-2px}
+  .knot-slot{height:300px;min-height:300px;flex:none;align-self:stretch}
+
+  .grid,.flips{grid-template-columns:1fr}
+  footer{grid-template-columns:1fr;padding:50px 20px 70px}
+}
+
+/* Very small phones */
+@media (max-width:380px){
+  nav a{font-size:12px;padding:6px 12px}
+  .hero2 h1{font-size:38px}
+}
 </style>
 </head>
 <body>
